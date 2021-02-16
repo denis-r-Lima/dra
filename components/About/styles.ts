@@ -34,7 +34,7 @@ export const Text = styled.p`
   font-family: "Newsreader", serif;
   opacity: 1;
   transform: translateX(0);
-  transition: all linear 0.8s;
+  transition: all linear 1s;
   line-height: 150%;
   &.Hidden {
     opacity: 0;

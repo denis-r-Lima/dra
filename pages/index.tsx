@@ -6,41 +6,44 @@ import TopMenu from "../components/TopMenu";
 import { Container } from "../styles/index/styles";
 
 export default function Home() {
+  useEffect(() => {
+    const aboutText = document.querySelector("#AboutText");
 
-  useEffect(()=>{
-    const aboutText = document.querySelector("#AboutText")
+    const aboutTextObserver = new IntersectionObserver(
+      (elements, aboutTextObserver) => {
+        elements.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.remove("Hidden");
+            aboutTextObserver.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-    const aboutTextObserver = new IntersectionObserver((elements, aboutTextObserver) => {
-      elements.forEach(e => {
-        if(e.isIntersecting){
-          e.target.classList.remove("Hidden")
-          aboutTextObserver.unobserve(e.target)
-        }
-      })
-    }, {threshold: 0.4})
+    aboutTextObserver.observe(aboutText);
+  });
 
-    aboutTextObserver.observe(aboutText)
+  useEffect(() => {
+    const topMenu = document.querySelector("#TopMenu");
+    const Header = document.querySelector("#Header");
 
-  })
+    const topMenuObserver = new IntersectionObserver(
+      (elements, topMenuObserver) => {
+        elements.forEach(e => {
+          if (!e.isIntersecting) {
+            topMenu.classList.add("Background");
+          }
+          if (e.isIntersecting) {
+            topMenu.classList.remove("Background");
+          }
+        });
+      },
+      { rootMargin: "-50%" }
+    );
 
-  useEffect(()=>{
-    const topMenu = document.querySelector("#TopMenu")
-    const Header = document.querySelector("#Header")
-
-    const topMenuObserver = new IntersectionObserver((elements, topMenuObserver) => {
-      elements.forEach(e => {
-        if(!e.isIntersecting){
-          topMenu.classList.add("Background")
-        }
-        if(e.isIntersecting){
-          topMenu.classList.remove("Background")
-        }
-      })
-    }, {rootMargin: "-50%"})
-
-    topMenuObserver.observe(Header)
-
-  })
+    topMenuObserver.observe(Header);
+  });
 
   return (
     <div>
