@@ -1,11 +1,17 @@
 import React from "react";
+import ScrollHandler from "../../controllers/Scroll";
 
 import { Container } from "./styles";
 
 const TopMenu: React.FC = () => {
   return (
-    <Container>
-      <a>Dra Aline Lima</a>
+    <Container id="TopMenu">
+      <a
+        href="#About"
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => ScrollHandler(e)}
+      >
+        Dra Aline
+      </a>
       <a>Planos Aceitos</a>
       <a>Ginecologia</a>
       <a>Obstetrícia</a>

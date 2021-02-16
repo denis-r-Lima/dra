@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media only screen and (max-width: 1300px) {
+  /* @media only screen and (max-width: 1300px) {
     background-position: -20rem 0%;
-  }
+    background-size: calc(100% + 20rem)
+  } */
   @media only screen and (max-width: 450px) {
     background-position: -25rem -5rem;
+    background-size: cover;
   }
   width: 100%;
   height: 100vh;
@@ -28,8 +30,8 @@ export const MainText = styled.div`
     color: #fff;
   }
   position: absolute;
-  right: 20vw;
-  bottom: 18rem;
+  right: 10vw;
+  bottom: 8vh;
   max-width: 30vw;
   display: flex;
   flex-direction: column;
@@ -38,12 +40,12 @@ export const MainText = styled.div`
   color: rgb(90, 40, 80);
   padding: 2rem;
   & > h2 {
-    font-size: 4.8rem;
+    font-size: 4.5rem;
     font-family: "Allura";
     padding: 2rem;
   }
   & > p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: "Open Sans", sans-serif;
     text-align: justify;
   }
@@ -61,6 +63,7 @@ export const Logo = styled.div`
   position: absolute;
   top: 2rem;
   left: 4rem;
+  z-index: 10;
   & > img {
     width: inherit;
   }

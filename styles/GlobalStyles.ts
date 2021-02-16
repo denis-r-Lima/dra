@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     width: 100vw;
     font-family:"Open Sans", sans-serif;
+    overflow-x: hidden;
   }
 
   a {

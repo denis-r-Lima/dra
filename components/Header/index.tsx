@@ -4,8 +4,7 @@ import { Container, Logo, MainText } from "./styles";
 
 const Header: React.FC = () => {
   return (
-    <Container>
-      {/* <img src="/img/369084708.jpg" alt="" /> */}
+    <Container id="Header">
       <Logo>
         <img src="/img/jdc050539.png" />
       </Logo>
