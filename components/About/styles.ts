@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("/img/draaline_gravida.png") left no-repeat fixed;
+  background: url('/img/draaline_gravida.png') left no-repeat fixed;
   background-size: 65% auto;
   background-position-x: -30rem;
-`;
+`
 
 export const Content = styled.div`
   position: absolute;
@@ -23,7 +23,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-`;
+`
 export const Text = styled.p`
   margin-right: 5%;
   color: rgb(90, 40, 80);
@@ -31,7 +31,7 @@ export const Text = styled.p`
   font-weight: bold;
   max-width: 50%;
   padding: 1rem;
-  font-family: "Newsreader", serif;
+  font-family: 'Newsreader', serif;
   opacity: 1;
   transform: translateX(0);
   transition: all linear 1s;
@@ -40,4 +40,4 @@ export const Text = styled.p`
     opacity: 0;
     transform: translateX(-20rem);
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.nav`
   @media only screen and (max-width: 480px) {
@@ -15,7 +15,7 @@ export const Container = styled.nav`
   font-size: 1.7rem;
   color: rgb(150, 50, 120);
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   transition: background-color linear 0.5s;
   & > a {
     margin: 1.7rem;
@@ -24,7 +24,7 @@ export const Container = styled.nav`
       color: rgb(90, 40, 80);
     }
   }
-  &.Background{
-    background-color: rgba(250,250,250, 0.9);
+  &.Background {
+    background-color: rgba(250, 250, 250, 0.9);
   }
-`;
+`

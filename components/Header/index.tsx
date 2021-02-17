@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import { Container, Logo, MainText } from "./styles";
+import { Container, Logo, MainText } from './styles'
 
 const Header: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
         </p>
       </MainText>
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

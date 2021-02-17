@@ -1,49 +1,49 @@
-import Head from "next/head";
-import { useEffect } from "react";
-import About from "../components/About";
-import Header from "../components/Header";
-import TopMenu from "../components/TopMenu";
-import { Container } from "../styles/index/styles";
+import React, { useEffect } from 'react'
+import Head from 'next/head'
+import About from '../components/About'
+import Header from '../components/Header'
+import TopMenu from '../components/TopMenu'
+import { Container } from '../styles/index/styles'
 
-export default function Home() {
+export default function Home (): JSX.Element {
   useEffect(() => {
-    const aboutText = document.querySelector("#AboutText");
+    const aboutText = document.querySelector('#AboutText')
 
     const aboutTextObserver = new IntersectionObserver(
       (elements, aboutTextObserver) => {
         elements.forEach(e => {
           if (e.isIntersecting) {
-            e.target.classList.remove("Hidden");
-            aboutTextObserver.unobserve(e.target);
+            e.target.classList.remove('Hidden')
+            aboutTextObserver.unobserve(e.target)
           }
-        });
+        })
       },
       { threshold: 0.5 }
-    );
+    )
 
-    aboutTextObserver.observe(aboutText);
-  });
+    aboutTextObserver.observe(aboutText)
+  })
 
   useEffect(() => {
-    const topMenu = document.querySelector("#TopMenu");
-    const Header = document.querySelector("#Header");
+    const topMenu = document.querySelector('#TopMenu')
+    const Header = document.querySelector('#Header')
 
     const topMenuObserver = new IntersectionObserver(
-      (elements, topMenuObserver) => {
+      elements => {
         elements.forEach(e => {
           if (!e.isIntersecting) {
-            topMenu.classList.add("Background");
+            topMenu.classList.add('Background')
           }
           if (e.isIntersecting) {
-            topMenu.classList.remove("Background");
+            topMenu.classList.remove('Background')
           }
-        });
+        })
       },
-      { rootMargin: "-50%" }
-    );
+      { rootMargin: '-50%' }
+    )
 
-    topMenuObserver.observe(Header);
-  });
+    topMenuObserver.observe(Header)
+  })
 
   return (
     <div>
@@ -75,16 +75,16 @@ export default function Home() {
         <TopMenu />
         <Header />
         <About id="AboutText">
-          "Prezo por um atendimento no qual a paciente se sinta acolhida e
+          &quot;Prezo por um atendimento no qual a paciente se sinta acolhida e
           segura 👸🏻🤰 para confidenciar tudo que for preciso, proporcionando
           cuidado integral a sua saúde. Busco constantemente o que há de melhor
           nas condutas diagnósticas 🔬, nos acompanhamentos e tratamentos.
           Também atuo como médica plantonista da maternidade do HUCAM 📌,
           referência do SUS para o acompanhamento de gestantes de alto risco,
           além de participar da formação diária dos novos ginecologistas
-          obstetras na residência médica deste hospital. 😘👨🏻👧🏽💖👶🏻👪🌼"
+          obstetras na residência médica deste hospital. 😘👨🏻👧🏽💖👶🏻👪🌼&quot;
         </About>
       </Container>
     </div>
-  );
+  )
 }

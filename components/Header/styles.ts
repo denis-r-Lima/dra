@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   /* @media only screen and (max-width: 1300px) {
@@ -11,11 +11,11 @@ export const Container = styled.div`
   }
   width: 100%;
   height: 100vh;
-  background: url("/img/draaline.jpg") no-repeat left top;
+  background: url('/img/draaline.jpg') no-repeat left top;
   background-size: cover;
   position: relative;
   overflow: hidden;
-`;
+`
 
 export const MainText = styled.div`
   @media only screen and (max-width: 770px) {
@@ -41,22 +41,22 @@ export const MainText = styled.div`
   padding: 2rem;
   & > h2 {
     font-size: 4.5rem;
-    font-family: "Allura";
+    font-family: 'Allura';
     padding: 2rem;
   }
   & > p {
     font-size: 1.5rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align: justify;
   }
   & > ul {
     font-size: 1.8rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 2rem 4rem;
     font-weight: bold;
     align-self: flex-start;
   }
-`;
+`
 
 export const Logo = styled.div`
   width: 25rem;
@@ -67,4 +67,4 @@ export const Logo = styled.div`
   & > img {
     width: inherit;
   }
-`;
+`

@@ -1,7 +1,7 @@
-import React from "react";
-import ScrollHandler from "../../controllers/Scroll";
+import React from 'react'
+import ScrollHandler from '../../controllers/Scroll'
 
-import { Container } from "./styles";
+import { Container } from './styles'
 
 const TopMenu: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const TopMenu: React.FC = () => {
       <a>O Consultório</a>
       <a>Instagram</a>
     </Container>
-  );
-};
+  )
+}
 
-export default TopMenu;
+export default TopMenu

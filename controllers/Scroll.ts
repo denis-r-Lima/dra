@@ -1,12 +1,14 @@
-export default function ScrollHandler(
+import React from 'react'
+
+export default function ScrollHandler (
   e: React.MouseEvent<HTMLAnchorElement>
 ): void {
-  e.preventDefault();
+  e.preventDefault()
 
-  const navTarget = e.currentTarget.getAttribute("href");
-  const targetElement = document.querySelector(navTarget) as HTMLDivElement;
+  const navTarget = e.currentTarget.getAttribute('href')
+  const targetElement = document.querySelector(navTarget) as HTMLDivElement
 
-  const offsetTop = targetElement.offsetTop;
+  const offsetTop = targetElement.offsetTop
 
-  scroll({ top: offsetTop, behavior: "smooth" });
+  scroll({ top: offsetTop, behavior: 'smooth' })
 }
